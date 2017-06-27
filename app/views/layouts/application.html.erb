@@ -7,8 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body class '<%= controller.controller_name %>'>
+<div id="banner">
 
-<%= yield %>
+  <%= @page_title || "Deliveroo" %><br>
+  <%= Time.now %>
+</div>
+<div id="side">
+  <ul>
+    <li><a href="http://localhost:3000/products">Home</a></li>
+    <li><a href="http://localhost:3000/store/index">Catalog</a></li>
+  </ul>
+</div>
+<div id="main">
+  <%= yield %>
+</div>
 
 </body>
 </html>
