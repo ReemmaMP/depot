@@ -1,4 +1,3 @@
-
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
 
@@ -11,4 +10,5 @@
   <% @cart.line_items.each do |item| %>
   <li><%= item.product.title %></li>
   <% end %>
+  <h3>total</h3>
 </ul>
